@@ -2,8 +2,29 @@
   "name": "anime-theme",
   "displayName": "Anime Theme",
   "publisher": "LunaCode",
-  "description": "A comprehensive collection of VS Code themes inspired by popular anime series including Jujutsu Kaisen, Attack on Titan, My Hero Academia, Naruto, One Piece, Demon Slayer, and more. Each theme features carefully crafted color palettes and extensive customization similar to the Doki Theme suite.",
+  "description": "A comprehensive collection of VS Code themes inspired by popular anime series including Jujutsu Kaisen, Attack on Titan, My Hero Academia, Naruto, One Piece, Demon Slayer, and more. Each theme features 200+ carefully crafted color definitions and extensive UI customization for the ultimate coding experience.",
   "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uwaimoye/anime-theme-pack"
+  },
+  "bugs": {
+    "url": "https://github.com/uwaimoye/anime-theme-pack/issues"
+  },
+  "homepage": "https://github.com/uwaimoye/anime-theme-pack#readme",
+  "keywords": [
+    "theme",
+    "anime",
+    "dark",
+    "jujutsu kaisen",
+    "attack on titan",
+    "my hero academia",
+    "naruto",
+    "one piece",
+    "demon slayer",
+    "cyberpunk"
+  ],
   "engines": {
     "vscode": "^1.109.0"
   },
