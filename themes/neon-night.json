@@ -1,0 +1,62 @@
+{
+  "name": "Cyberpunk: Edgerunners (Moon & Lucy)",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#0B1015", // Deep Space (Moon Scene)
+    "editor.foreground": "#E0E0E0",
+    "sideBar.background": "#080B0F",
+    "statusBar.background": "#080B0F",
+    "activityBar.background": "#080B0F",
+    "activityBar.foreground": "#FF0055", // Arasaka Red / Lucy's Eyes
+    "editorCursor.foreground": "#39FF14", // Sandevistan Green
+    "editor.selectionBackground": "#39FF1422",
+    "terminal.background": "#0B1015",
+    "terminal.foreground": "#E0E0E0",
+    "editorLineNumber.activeForeground": "#F0F0F0"
+  },
+  "tokenColors": [
+    {
+      "name": "Comments (Netrunners)",
+      "scope": "comment",
+      "settings": {
+        "foreground": "#5C6370",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Keywords (Lucy's Hair)",
+      "scope": "keyword",
+      "settings": {
+        "foreground": "#CE93D8" // Pastel Purple/Pink
+      }
+    },
+    {
+      "name": "Strings (David's Jacket)",
+      "scope": "string",
+      "settings": {
+        "foreground": "#FFEE58" // Neon Yellow
+      }
+    },
+    {
+      "name": "Functions (Cyberware)",
+      "scope": "function",
+      "settings": {
+        "foreground": "#00E5FF" // Cyan
+      }
+    },
+    {
+      "name": "Variables (Neon City)",
+      "scope": "variable",
+      "settings": {
+        "foreground": "#FF4081" // Pink
+      }
+    },
+    {
+      "name": "Numbers",
+      "scope": "constant.numeric",
+      "settings": {
+        "foreground": "#FF9100" // Orange
+      }
+    }
+  ]
+}

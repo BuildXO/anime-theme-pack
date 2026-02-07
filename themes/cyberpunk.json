@@ -1,0 +1,54 @@
+{
+  "name": "Akira (Neo Tokyo)",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#1A1A1D", // Concrete Grey
+    "editor.foreground": "#EEEEEE",
+    "sideBar.background": "#121214",
+    "statusBar.background": "#950740", // Bike Red
+    "activityBar.background": "#1A1A1D",
+    "activityBar.foreground": "#C3073F",
+    "editorCursor.foreground": "#4E4E50",
+    "editor.selectionBackground": "#C3073F44",
+    "terminal.background": "#1A1A1D",
+    "terminal.foreground": "#EEEEEE"
+  },
+  "tokenColors": [
+    {
+      "name": "Comments (Psychic Noise)",
+      "scope": "comment",
+      "settings": {
+        "foreground": "#6F2232",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Keywords (Capsule Gang)",
+      "scope": "keyword",
+      "settings": {
+        "foreground": "#C3073F" // Red
+      }
+    },
+    {
+      "name": "Strings (Laser Bike)",
+      "scope": "string",
+      "settings": {
+        "foreground": "#4E8397" // Muted Cyan
+      }
+    },
+    {
+      "name": "Functions (Tetsuo Mutation)",
+      "scope": "function",
+      "settings": {
+        "foreground": "#950740" // Darker Red
+      }
+    },
+    {
+      "name": "Variables",
+      "scope": "variable",
+      "settings": {
+        "foreground": "#FFFFFF"
+      }
+    }
+  ]
+}

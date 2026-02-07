@@ -1,0 +1,62 @@
+{
+  "name": "anime-theme",
+  "displayName": "Anime Theme",
+  "publisher": "LunaCode",
+  "description": "A comprehensive collection of VS Code themes inspired by popular anime series including Jujutsu Kaisen, Attack on Titan, My Hero Academia, Naruto, One Piece, Demon Slayer, and more. Each theme features carefully crafted color palettes and extensive customization similar to the Doki Theme suite.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.109.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Animee Classic",
+        "uiTheme": "vs-dark",
+        "path": "./themes/animee-color-theme.json"
+      },
+      {
+        "label": "Jujutsu Kaisen: Gojo Satoru",
+        "uiTheme": "vs-dark",
+        "path": "./themes/jjk-gojo.json"
+      },
+      {
+        "label": "Attack on Titan: Eren's Determination",
+        "uiTheme": "vs-dark",
+        "path": "./themes/attack-on-titan-eren.json"
+      },
+      {
+        "label": "My Hero Academia: Deku Plus Ultra",
+        "uiTheme": "vs-dark",
+        "path": "./themes/my-hero-academia-deku.json"
+      },
+      {
+        "label": "Naruto: Hokage Orange",
+        "uiTheme": "vs-dark",
+        "path": "./themes/naruto-orange.json"
+      },
+      {
+        "label": "One Piece: Straw Hat Red",
+        "uiTheme": "vs-dark",
+        "path": "./themes/one-piece-luffy.json"
+      },
+      {
+        "label": "Demon Slayer: Sakura Breathing",
+        "uiTheme": "vs-dark",
+        "path": "./themes/sakura-dark.json"
+      },
+      {
+        "label": "Cyberpunk Edgerunners: Neon Night",
+        "uiTheme": "vs-dark",
+        "path": "./themes/neon-night.json"
+      },
+      {
+        "label": "Akira: Neo Tokyo",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cyberpunk.json"
+      }
+    ]
+  }
+}

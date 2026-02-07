@@ -1,0 +1,47 @@
+{
+  "name": "Demon Slayer (Sakura Breathing)",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#19151C", 
+    "editor.foreground": "#EAEAF0",
+    "editorCursor.foreground": "#FF9ECD", 
+    "editor.selectionBackground": "#FF9ECD33",
+    "sideBar.background": "#130F16",
+    "statusBar.background": "#1F1A24",
+    "terminal.background": "#19151C",
+    "terminal.foreground": "#F8F8F2",
+    "activityBar.foreground": "#FF9ECD",
+    "activityBar.background": "#130F16"
+  },
+  "tokenColors": [
+    {
+      "name": "Comments (Muted Petals)",
+      "scope": "comment",
+      "settings": {
+        "foreground": "#6C7393",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Keywords (Nezuko Rose)",
+      "scope": "keyword",
+      "settings": {
+        "foreground": "#FF7AB2"
+      }
+    },
+    {
+      "name": "Strings (Lightning Yellow)",
+      "scope": "string",
+      "settings": {
+        "foreground": "#F0E18A" 
+      }
+    },
+    {
+      "name": "Functions (Water Breathing Blue)",
+      "scope": "function",
+      "settings": {
+        "foreground": "#64B5F6" 
+      }
+    }
+  ]
+}
