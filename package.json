@@ -2,8 +2,9 @@
   "name": "anime-theme",
   "displayName": "Anime Theme",
   "publisher": "LunaCode",
+  "icon": "images/logo.png",
   "description": "A comprehensive collection of VS Code themes inspired by popular anime series including Jujutsu Kaisen, Attack on Titan, My Hero Academia, Naruto, One Piece, Demon Slayer, and more. Each theme features 200+ carefully crafted color definitions and extensive UI customization for the ultimate coding experience.",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -31,7 +32,82 @@
   "categories": [
     "Themes"
   ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "contributes": {
+    "commands": [
+      {
+        "command": "animeTheme.installBackground",
+        "title": "Anime Theme: Install Background for Current Theme",
+        "category": "Anime Theme"
+      },
+      {
+        "command": "animeTheme.chooseBackground",
+        "title": "Anime Theme: Choose and Install Background",
+        "category": "Anime Theme"
+      },
+      {
+        "command": "animeTheme.removeBackground",
+        "title": "Anime Theme: Remove Background Image",
+        "category": "Anime Theme"
+      },
+      {
+        "command": "animeTheme.reinstallBackground",
+        "title": "Anime Theme: Reinstall Background (Troubleshooting)",
+        "category": "Anime Theme"
+      }
+    ],
+    "configuration": {
+      "title": "Anime Theme",
+      "properties": {
+        "animeTheme.background.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable background images"
+        },
+        "animeTheme.background.path": {
+          "type": "string",
+          "default": "",
+          "description": "Custom background image path (leave empty to use theme default)",
+          "markdownDescription": "Path to a custom background image file. Leave empty to use the theme's default background."
+        },
+        "animeTheme.background.opacity": {
+          "type": "number",
+          "default": 0.15,
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Background image opacity (0.0 to 1.0)",
+          "markdownDescription": "Adjust the opacity of the background image. Lower values make it more subtle."
+        },
+        "animeTheme.background.anchor": {
+          "type": "string",
+          "default": "center",
+          "enum": [
+            "center",
+            "top",
+            "bottom",
+            "left",
+            "right",
+            "top left",
+            "top right",
+            "bottom left",
+            "bottom right"
+          ],
+          "description": "Background image position anchor",
+          "markdownDescription": "Position of the background image within the editor."
+        },
+        "animeTheme.background.blur": {
+          "type": "number",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 10,
+          "description": "Background image blur amount in pixels (0 = no blur, 2-3 recommended)",
+          "markdownDescription": "Apply a subtle blur effect to the background image to reduce visual distraction. Recommended: 2-3px."
+        }
+      }
+    },
     "themes": [
       {
         "label": "Animee Classic",
@@ -79,5 +155,20 @@
         "path": "./themes/cyberpunk.json"
       }
     ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.x",
+    "@types/vscode": "^1.109.0",
+    "@typescript-eslint/eslint-plugin": "^6.x",
+    "@typescript-eslint/parser": "^6.x",
+    "eslint": "^8.x",
+    "typescript": "^5.3.0"
   }
 }

@@ -1,75 +1,137 @@
-# 🎌 Anime Theme Pack
+# 🎌 Anime Theme Pack – Naruto, Jujutsu Kaisen & Anime VS Code Themes
 
-A comprehensive collection of VS Code themes inspired by popular anime series. Each theme features carefully crafted color palettes with extensive UI customization for the ultimate coding experience.
+Anime Theme Pack is a collection of beautiful anime-inspired VS Code themes designed for developers who love coding with anime aesthetics.
+
+This extension includes themes inspired by Naruto, Jujutsu Kaisen, Attack on Titan, Demon Slayer, My Hero Academia, One Piece, and Cyberpunk Edgerunners, with carefully crafted dark color palettes, rich syntax highlighting, and optional anime background images.
+
+If you're looking for the best anime VS Code theme, an anime coding theme, or an otaku developer setup, this theme pack is built for you.
+
+## ✨ Features
+
+- 🎨 Anime-Inspired VS Code Themes based on popular anime series
+- 🌙 Beautiful Dark Themes optimized for long coding sessions
+- 🖼️ Optional Anime Background Images for immersive coding
+- 💻 Rich Syntax Highlighting across all programming languages
+- 🔍 Semantic Highlighting Support for modern languages
+- 🎭 Carefully Crafted Anime Color Palettes
+- 🖥️ Full VS Code UI Coverage
+- 🌈 Custom Terminal Themes
+- 🔧 Git Decoration Colors
+- 📦 Symbol Icon Coloring
+
+Each theme contains 200+ color definitions to ensure a consistent and polished experience across the entire editor.
 
 ## 🎨 Theme Showcase
 
 ### Jujutsu Kaisen: Gojo Satoru
 ![Jujutsu Kaisen Theme](./images/screenshots/jjk-gojo.png)
 
-Dark theme featuring Gojo's signature limitless blue color scheme with 200+ customized colors. Perfect for those who appreciate the Six Eyes aesthetics.
+A dark Jujutsu Kaisen VS Code theme inspired by Gojo Satoru's limitless blue aesthetic.
+Perfect for developers who want a cool blue anime coding environment.
 
 ---
 
 ### Attack on Titan: Eren's Determination
 ![Attack on Titan Theme](./images/screenshots/attack-on-titan.png)
 
-Dark theme with earthy brown tones representing the fight for freedom. Channel your inner Scout Regiment while coding.
+A dark Attack on Titan VS Code theme with earthy brown tones representing the fight for freedom.
+
+---
+
+### Demon Slayer: Sakura Breathing
+![Demon Slayer Theme](./images/screenshots/demon-slayer.png)
+
+An elegant Demon Slayer VS Code theme featuring soft sakura pink accents and smooth contrasts.
+
+---
+
+### Cyberpunk Edgerunners: Neon Night
+![Cyberpunk Edgerunners Theme](./images/screenshots/cyberpunk-neon.png)
+
+A neon Cyberpunk Edgerunners VS Code theme with vibrant futuristic colors.
 
 ---
 
 ### My Hero Academia: Deku Plus Ultra
 ![My Hero Academia Theme](./images/screenshots/my-hero-academia.png)
 
-Dark theme with vibrant green colors inspired by One For All. Go beyond with this heroic color palette.
+A vibrant My Hero Academia VS Code theme inspired by One For All energy and heroic green accents.
 
 ---
 
 ### Naruto: Hokage Orange
 ![Naruto Theme](./images/screenshots/naruto.png)
 
-Dark theme with bold orange representing the Will of Fire. Believe it - this theme will power through your longest coding sessions.
-
----
-🎨 **200+ Color Definitions** - Comprehensive UI customization for every element
-- 💻 **Rich Syntax Highlighting** - Extensive token colors for all programming languages
-- 🔍 **Semantic Highlighting** - Full support for modern language features
-- 🎭 **Anime-Inspired Palettes** - Carefully crafted colors matching each series' aesthetics
-- 🖥️ **Complete Coverage** - Consistent theming across all VS Code UI elements
-- 🌈 **Terminal Themes** - Custom ANSI color schemes for integrated terminal
-- 🔧 **Git Integration** - Beautiful decoration colors for version control
-- 📦 **Symbol Icons** - Customized colors for file explorer and symbol navighots/cyberpunk-neon.png)
-
-Dark theme with neon cyberpunk aesthetics. Code in the night city with this futuristic color scheme.
+A bold Naruto VS Code theme featuring the iconic orange Will of Fire color palette.
+Believe it - this anime coding theme powers through long coding sessions.
 
 ---
 
-### Akira: Neo Tokyo
-![Akira Theme](./images/screenshots/akira.png)
+### One Piece: Straw Hat Red
+![One Piece Theme](./images/screenshots/one-piece.png)
 
-Dark theme inspired by Neo Tokyo. Experience the dystopian future while you code.
+A One Piece VS Code theme inspired by Luffy's adventures with bold red highlights.
 
----
 
-### Animee Classic
-![Classic Theme](./images/screenshots/animee-classic.png)
 
-Original Material-inspired dark theme with balanced colors for everyday coding.
+## 🖼️ Background Image Feature
 
-## ✨ Features
+Transform your coding environment with beautiful anime backgrounds:
 
-- **200+ Color Definitions** per theme for comprehensive UI customization
-- **Extensive Token Colors** for rich syntax highlighting across all languages
-- **Semantic Highlighting** support for modern language features
-- **Carefully Crafted Palettes** inspired by each anime's signature colors
-- **Consistent Experience** across all VS Code UI elements
+### Quick Setup
+```
+1. Activate an Anime Theme
+2. Ctrl+Shift+P → "Anime Theme: Install Background for Current Theme"
+3. Accept consent → Reload VS Code
+```
 
-## 🎯 Theme Structure
+### Customization
 
-Each theme includes:
-- Complete editor color customization
-- Activity bar, sidebar, and status bar theming
-- Terminal color schemes with ANSI support
+Adjust background appearance in Settings:
+
+```json
+{
+  "animeTheme.background.enabled": true,
+  "animeTheme.background.opacity": 0.15,
+  "animeTheme.background.anchor": "center",
+  "animeTheme.background.path": "" // Leave empty for theme default
+}
+```
+
+### Commands
+
+| Command | Purpose |
+|---------|---------|
+| `Anime Theme: Install Background for Current Theme` | Apply background to active theme |
+| `Anime Theme: Choose and Install Background` | Pick theme and apply background |
+| `Anime Theme: Remove Background Image` | Restore original VS Code appearance |
+| `Anime Theme: Reinstall Background (Troubleshooting)` | Fix background issues |
+
+### From VS Code Marketplace
+
+1. Open **Extensions** view (`Ctrl+Shift+X` / `Cmd+Shift+X`)
+2. Search for **"Anime Theme"** or **"Anime Theme Pack"**
+3. Click **Install**
+4. Open theme selector (`Ctrl+K Ctrl+T` / `Cmd+K Cmd+T`)
+5. Choose your favorite anime theme
+
+### Manual Installation
+
+1. Download the `.vsix` file from [releases](https://github.com/BuildXO/anime-theme-pack/releases)
+2. Open VS Code
+3. Go to Extensions view
+4. Click `...` menu → `Install from VSIX...`
+5. Select the downloaded file
+
+## 🖼️ Background Images (Optional)
+
+After installing a theme, add immersive anime backgrounds:
+
+1. **Install Background**: `Ctrl+Shift+P` → `Anime Theme: Install Background for Current Theme`
+2. **Customize**: Adjust opacity and position in settings
+3. **Remove**: `Anime Theme: Remove Background Image` to restore defaults
+
+See the [Background Usage Guide](./BACKGROUND_USAGE.md) for detailed
 - Git decoration colors
 - Debug toolbar styling
 - Notification and panel theming
