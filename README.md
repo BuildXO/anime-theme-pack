@@ -2,9 +2,9 @@
 
 > **9 stunning anime-inspired VS Code themes** featuring Naruto, Jujutsu Kaisen, Attack on Titan, Demon Slayer, My Hero Academia, One Piece, Cyberpunk Edgerunners, Akira, and Anime Classics — with optional immersive anime background images.
 
-[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/LunaCode.anime-theme?label=VS%20Code%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=LunaCode.anime-theme)
-[![Installs](https://img.shields.io/visual-studio-marketplace/i/LunaCode.anime-theme)](https://marketplace.visualstudio.com/items?itemName=LunaCode.anime-theme)
-[![Rating](https://img.shields.io/visual-studio-marketplace/r/LunaCode.anime-theme)](https://marketplace.visualstudio.com/items?itemName=LunaCode.anime-theme)
+[![Version](https://badgen.net/vs-marketplace/v/LunaCode.anime-theme)](https://marketplace.visualstudio.com/items?itemName=LunaCode.anime-theme)
+[![Installs](https://badgen.net/vs-marketplace/i/LunaCode.anime-theme)](https://marketplace.visualstudio.com/items?itemName=LunaCode.anime-theme)
+[![Rating](https://badgen.net/vs-marketplace/rating/LunaCode.anime-theme)](https://marketplace.visualstudio.com/items?itemName=LunaCode.anime-theme)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
 
 If you're an anime fan who codes, this is the VS Code theme pack you've been waiting for. Each theme is meticulously crafted with **200+ color definitions**, rich syntax highlighting, full UI coverage, and custom terminal palettes — built to make long coding sessions feel like an adventure.
