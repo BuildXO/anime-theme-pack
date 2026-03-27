@@ -19,7 +19,6 @@ All 9 themes are available immediately after installation — pick your favorite
 
 ### 1. Jujutsu Kaisen: Gojo Satoru
 ![Jujutsu Kaisen Theme](./images/screenshots/jjk-gojo.png)
-![Jujutsu Kaisen Background](./images/backgrounds/jjk-gojo-bg.png)
 
 Inspired by Gojo Satoru's limitless blue and infinity aesthetic. Deep navy backgrounds with electric blue and violet accents make this one of the most popular anime VS Code themes for fans of **Jujutsu Kaisen**. Perfect for a cool, calm, and powerful coding environment.
 
@@ -27,7 +26,6 @@ Inspired by Gojo Satoru's limitless blue and infinity aesthetic. Deep navy backg
 
 ### 2. Attack on Titan: Eren's Determination
 ![Attack on Titan Theme](./images/screenshots/attack-on-titan.png)
-![Attack on Titan Background](./images/backgrounds/attack-on-titan-bg.png)
 
 Earthy browns, muted khakis, and blood-red highlights capture the raw, desperate energy of humanity's fight for freedom. This **Attack on Titan VS Code theme** is rugged, readable, and built to last.
 
@@ -35,7 +33,6 @@ Earthy browns, muted khakis, and blood-red highlights capture the raw, desperate
 
 ### 3. Demon Slayer: Sakura Breathing
 ![Demon Slayer Theme](./images/screenshots/demon-slayer.png)
-![Demon Slayer Background](./images/backgrounds/demon-slayer-bg.png)
 
 Elegant and serene. Soft sakura pinks, misty purples, and moonlit whites form a breathtakingly beautiful **Demon Slayer VS Code theme** ideal for developers who appreciate refined aesthetics.
 
@@ -43,7 +40,6 @@ Elegant and serene. Soft sakura pinks, misty purples, and moonlit whites form a 
 
 ### 4. Akira: Neo Town
 ![Akira Theme](./images/screenshots/akira.png)
-![Akira Background](./images/backgrounds/akira-bg.png)
 
 A retro-futuristic **Akira VS Code theme** channeling Neo Tokyo's neon-drenched streets and cyberpunk chaos. Deep blacks, electric reds, and city-glow oranges for developers with a taste for classic anime history.
 
@@ -51,16 +47,13 @@ A retro-futuristic **Akira VS Code theme** channeling Neo Tokyo's neon-drenched 
 
 ### 5. Anime Classics
 ![Anime Classics Theme](./images/screenshots/animee-classic.png)
-![Anime Classics Background](./images/backgrounds/anime-classic-bg.png)
 
 A love letter to golden-age anime. Warm sepia tones, soft creams, and timeless color choices give this **Anime Classics VS Code theme** a nostalgic feel with all the readability of a modern editor.
-
 
 ---
 
 ### 6. My Hero Academia: Deku Plus Ultra
 ![My Hero Academia Theme](./images/screenshots/my-hero-academia.png)
-![My Hero Academia Background](./images/backgrounds/my-hero-academia-bg.png)
 
 Go Beyond! Vibrant One For All greens, hero blues, and energetic highlights make this **My Hero Academia VS Code theme** the go-to for developers ready to tackle any challenge. PLUS ULTRA.
 
@@ -68,7 +61,6 @@ Go Beyond! Vibrant One For All greens, hero blues, and energetic highlights make
 
 ### 7. One Piece: Straw Hat Red
 ![One Piece Theme](./images/screenshots/one-piece.png)
-![One Piece Background](./images/backgrounds/one-piece-bg.png)
 
 Set sail with Luffy's crew. Bold reds, ocean blues, and sunny yellows bring the adventure of the Grand Line straight to your editor in this action-packed **One Piece VS Code theme**.
 
@@ -76,7 +68,6 @@ Set sail with Luffy's crew. Bold reds, ocean blues, and sunny yellows bring the 
 
 ### 8. Cyberpunk Edgerunners: Neon Night
 ![Cyberpunk Edgerunners Theme](./images/screenshots/cyberpunk-neon.png)
-![Cyberpunk Edgerunners Background](./images/backgrounds/cyberpunk-neon-bg.png)
 
 Night City never sleeps. Hot pinks, electric yellows, and neon cyan pulse through this futuristic **Cyberpunk Edgerunners VS Code theme** — designed for developers who code at midnight with synthwave on full blast.
 
@@ -84,7 +75,6 @@ Night City never sleeps. Hot pinks, electric yellows, and neon cyan pulse throug
 
 ### 9. Naruto: Hokage Orange
 ![Naruto Theme](./images/screenshots/naruto.png)
-![Naruto Background](./images/backgrounds/naruto-bg.png)
 
 Believe it! This bold **Naruto VS Code theme** channels the iconic orange Will of Fire palette alongside deep shadow blacks and leaf-green accents. Built for developers who never give up — no matter how long the debug session gets.
 ---
