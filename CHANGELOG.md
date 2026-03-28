@@ -2,6 +2,12 @@
 
 All notable changes to the "anime-theme" extension will be documented in this file.
 
+## [0.1.1] - 2026-03-28
+
+### Themes Added 
+- animee-color-theme (classic)
+- neon-night
+
 ## [0.1.0] - 2026-03-21
 
 ### Added

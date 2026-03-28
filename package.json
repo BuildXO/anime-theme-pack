@@ -1,10 +1,10 @@
 {
   "name": "anime-theme",
-  "displayName": "Anime Theme",
+  "displayName": "Anime Theme Pack — Jujutsu Kaisen, Naruto, One Piece & More",
   "publisher": "LunaCode",
   "icon": "images/logo.png",
-  "description": "A comprehensive collection of VS Code themes inspired by popular anime series including Jujutsu Kaisen, Attack on Titan, My Hero Academia, Naruto, One Piece, Demon Slayer, and more. Each theme features 200+ carefully crafted color definitions and extensive UI customization for the ultimate coding experience.",
-  "version": "0.1.0",
+  "description": "🎌 The ultimate anime VS Code theme collection. 9 immersive dark themes inspired by Jujutsu Kaisen (Gojo Satoru), Attack on Titan, My Hero Academia (Deku), Naruto, One Piece, Demon Slayer, Cyberpunk Edgerunners & Akira. Features 200+ color definitions, animated background support, and full UI customization.",
+  "version": "0.1.1",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -17,21 +17,62 @@
   "keywords": [
     "theme",
     "anime",
-    "dark",
+    "dark theme",
+    "color theme",
     "jujutsu kaisen",
+    "jjk",
+    "gojo satoru",
     "attack on titan",
+    "aot",
+    "eren yeager",
     "my hero academia",
+    "mha",
+    "bnha",
+    "deku",
+    "izuku midoriya",
     "naruto",
+    "naruto uzumaki",
+    "hokage",
     "one piece",
+    "luffy",
+    "straw hat",
     "demon slayer",
-    "cyberpunk"
+    "kimetsu no yaiba",
+    "tanjiro",
+    "cyberpunk edgerunners",
+    "akira",
+    "neo tokyo",
+    "neon",
+    "anime dark theme",
+    "manga",
+    "kawaii",
+    "otaku",
+    "japanese",
+    "aesthetic",
+    "background image",
+    "custom background",
+    "vscode theme",
+    "editor theme",
+    "syntax highlighting",
+    "ui theme",
+    "programming theme",
+    "developer theme",
+    "coding theme",
+    "dark",
+    "vibrant",
+    "colorful"
   ],
   "engines": {
     "vscode": "^1.109.0"
   },
   "categories": [
-    "Themes"
+    "Themes",
+    "Other"
   ],
+  "galleryBanner": {
+    "color": "#0D0D1A",
+    "theme": "dark"
+  },
   "main": "./out/extension.js",
   "activationEvents": [
     "onStartupFinished"
