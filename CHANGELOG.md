@@ -2,6 +2,23 @@
 
 All notable changes to the "anime-theme" extension will be documented in this file.
 
+## [0.1.2] - Unreleased
+
+### Fixed
+- Use VS Code's installation root for background file paths, including macOS Code Helper processes and versioned Windows installs.
+- Prefer the desktop workbench stylesheet, keep the web stylesheet fallback, and stop guessing the removed `workbench.web.api.css` file.
+- Update vulnerable transitive dependencies: picomatch, flatted, js-yaml and brace-expansion.
+
+### Development
+- Add installation-layout regression tests and an extension manifest/file test.
+- Add Linux, Windows and macOS CI for clean install, compile, tests and VSIX packaging, with downloadable build artifacts.
+- Pin the VSIX packaging tool and update GitHub Actions runtimes; enable weekly dependency update groups.
+- CodeQL scans now run successfully on current code.
+
+### Release status
+- Prepared for manual Marketplace publication. No automatic publishing workflow is added.
+- Regression fixtures cover macOS paths, but real macOS background installation still needs testing. Issues #1 and #3 remain open pending that confirmation; actual write permissions may still need attention.
+
 ## [0.1.1] - 2026-03-28
 
 ### Themes Added 
