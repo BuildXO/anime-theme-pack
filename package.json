@@ -4,7 +4,7 @@
   "publisher": "LunaCode",
   "icon": "images/logo.png",
   "description": "\ud83c\udf8c The ultimate anime VS Code theme collection. 9 immersive dark themes inspired by Jujutsu Kaisen (Gojo Satoru), Attack on Titan, My Hero Academia (Deku), Naruto, One Piece, Demon Slayer, Cyberpunk Edgerunners & Akira. Features 200+ color definitions, animated background support, and full UI customization.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "repository": {
     "type": "git",
