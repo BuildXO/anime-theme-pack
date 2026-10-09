@@ -1,0 +1,218 @@
+{
+  "name": "anime-theme",
+  "displayName": "Anime Theme Pack \u2014 Jujutsu Kaisen, Naruto, One Piece & More",
+  "publisher": "LunaCode",
+  "icon": "images/logo.png",
+  "description": "\ud83c\udf8c The ultimate anime VS Code theme collection. 9 immersive dark themes inspired by Jujutsu Kaisen (Gojo Satoru), Attack on Titan, My Hero Academia (Deku), Naruto, One Piece, Demon Slayer, Cyberpunk Edgerunners & Akira. Features 200+ color definitions, animated background support, and full UI customization.",
+  "version": "0.1.2",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BuildXO/anime-theme-pack"
+  },
+  "bugs": {
+    "url": "https://github.com/BuildXO/anime-theme-pack/issues"
+  },
+  "homepage": "https://github.com/BuildXO/anime-theme-pack#readme",
+  "keywords": [
+    "theme",
+    "anime",
+    "dark theme",
+    "color theme",
+    "jujutsu kaisen",
+    "jjk",
+    "gojo satoru",
+    "attack on titan",
+    "aot",
+    "eren yeager",
+    "my hero academia",
+    "mha",
+    "bnha",
+    "deku",
+    "izuku midoriya",
+    "naruto",
+    "naruto uzumaki",
+    "hokage",
+    "one piece",
+    "luffy",
+    "straw hat",
+    "demon slayer",
+    "kimetsu no yaiba",
+    "tanjiro",
+    "cyberpunk edgerunners",
+    "akira",
+    "neo tokyo",
+    "neon",
+    "anime dark theme",
+    "manga",
+    "kawaii",
+    "otaku",
+    "japanese",
+    "aesthetic",
+    "background image",
+    "custom background",
+    "vscode theme",
+    "editor theme",
+    "syntax highlighting",
+    "ui theme",
+    "programming theme",
+    "developer theme",
+    "coding theme",
+    "dark",
+    "vibrant",
+    "colorful"
+  ],
+  "engines": {
+    "vscode": "^1.109.0"
+  },
+  "categories": [
+    "Themes",
+    "Other"
+  ],
+  "galleryBanner": {
+    "color": "#0D0D1A",
+    "theme": "dark"
+  },
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "animeTheme.installBackground",
+        "title": "Anime Theme: Install Background for Current Theme",
+        "category": "Anime Theme"
+      },
+      {
+        "command": "animeTheme.chooseBackground",
+        "title": "Anime Theme: Choose and Install Background",
+        "category": "Anime Theme"
+      },
+      {
+        "command": "animeTheme.removeBackground",
+        "title": "Anime Theme: Remove Background Image",
+        "category": "Anime Theme"
+      },
+      {
+        "command": "animeTheme.reinstallBackground",
+        "title": "Anime Theme: Reinstall Background (Troubleshooting)",
+        "category": "Anime Theme"
+      }
+    ],
+    "configuration": {
+      "title": "Anime Theme",
+      "properties": {
+        "animeTheme.background.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable background images"
+        },
+        "animeTheme.background.path": {
+          "type": "string",
+          "default": "",
+          "description": "Custom background image path (leave empty to use theme default)",
+          "markdownDescription": "Path to a custom background image file. Leave empty to use the theme's default background."
+        },
+        "animeTheme.background.opacity": {
+          "type": "number",
+          "default": 0.15,
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Background image opacity (0.0 to 1.0)",
+          "markdownDescription": "Adjust the opacity of the background image. Lower values make it more subtle."
+        },
+        "animeTheme.background.anchor": {
+          "type": "string",
+          "default": "center",
+          "enum": [
+            "center",
+            "top",
+            "bottom",
+            "left",
+            "right",
+            "top left",
+            "top right",
+            "bottom left",
+            "bottom right"
+          ],
+          "description": "Background image position anchor",
+          "markdownDescription": "Position of the background image within the editor."
+        },
+        "animeTheme.background.blur": {
+          "type": "number",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 10,
+          "description": "Background image blur amount in pixels (0 = no blur, 2-3 recommended)",
+          "markdownDescription": "Apply a subtle blur effect to the background image to reduce visual distraction. Recommended: 2-3px."
+        }
+      }
+    },
+    "themes": [
+      {
+        "label": "Animee Classic",
+        "uiTheme": "vs-dark",
+        "path": "./themes/animee-color-theme.json"
+      },
+      {
+        "label": "Jujutsu Kaisen: Gojo Satoru",
+        "uiTheme": "vs-dark",
+        "path": "./themes/jjk-gojo.json"
+      },
+      {
+        "label": "Attack on Titan: Eren's Determination",
+        "uiTheme": "vs-dark",
+        "path": "./themes/attack-on-titan-eren.json"
+      },
+      {
+        "label": "My Hero Academia: Deku Plus Ultra",
+        "uiTheme": "vs-dark",
+        "path": "./themes/my-hero-academia-deku.json"
+      },
+      {
+        "label": "Naruto: Hokage Orange",
+        "uiTheme": "vs-dark",
+        "path": "./themes/naruto-orange.json"
+      },
+      {
+        "label": "One Piece: Straw Hat Red",
+        "uiTheme": "vs-dark",
+        "path": "./themes/one-piece-luffy.json"
+      },
+      {
+        "label": "Demon Slayer: Sakura Breathing",
+        "uiTheme": "vs-dark",
+        "path": "./themes/sakura-dark.json"
+      },
+      {
+        "label": "Cyberpunk Edgerunners: Neon Night",
+        "uiTheme": "vs-dark",
+        "path": "./themes/neon-night.json"
+      },
+      {
+        "label": "Akira: Neo Tokyo",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cyberpunk.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "lint": "eslint src --ext ts",
+    "test": "node --test test/*.test.cjs",
+    "package": "vsce package --githubBranch master --out anime-theme.vsix"
+  },
+  "devDependencies": {
+    "@types/node": "^20.x",
+    "@types/vscode": "^1.109.0",
+    "@typescript-eslint/eslint-plugin": "^6.x",
+    "@typescript-eslint/parser": "^6.x",
+    "@vscode/vsce": "4.0.0",
+    "eslint": "^8.x",
+    "typescript": "^5.3.0"
+  }
+}
