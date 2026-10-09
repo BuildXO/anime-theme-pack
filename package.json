@@ -1,9 +1,9 @@
 {
   "name": "anime-theme",
-  "displayName": "Anime Theme Pack — Jujutsu Kaisen, Naruto, One Piece & More",
+  "displayName": "Anime Theme Pack \u2014 Jujutsu Kaisen, Naruto, One Piece & More",
   "publisher": "LunaCode",
   "icon": "images/logo.png",
-  "description": "🎌 The ultimate anime VS Code theme collection. 9 immersive dark themes inspired by Jujutsu Kaisen (Gojo Satoru), Attack on Titan, My Hero Academia (Deku), Naruto, One Piece, Demon Slayer, Cyberpunk Edgerunners & Akira. Features 200+ color definitions, animated background support, and full UI customization.",
+  "description": "\ud83c\udf8c The ultimate anime VS Code theme collection. 9 immersive dark themes inspired by Jujutsu Kaisen (Gojo Satoru), Attack on Titan, My Hero Academia (Deku), Naruto, One Piece, Demon Slayer, Cyberpunk Edgerunners & Akira. Features 200+ color definitions, animated background support, and full UI customization.",
   "version": "0.1.1",
   "license": "MIT",
   "repository": {
@@ -202,13 +202,16 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile",
-    "lint": "eslint src --ext ts"
+    "lint": "eslint src --ext ts",
+    "test": "node --test test/*.test.cjs",
+    "package": "vsce package --githubBranch master --out anime-theme.vsix"
   },
   "devDependencies": {
     "@types/node": "^20.x",
     "@types/vscode": "^1.109.0",
     "@typescript-eslint/eslint-plugin": "^6.x",
     "@typescript-eslint/parser": "^6.x",
+    "@vscode/vsce": "4.0.0",
     "eslint": "^8.x",
     "typescript": "^5.3.0"
   }
