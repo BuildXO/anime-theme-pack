@@ -11,3 +11,6 @@ tsconfig.json
 node_modules/**
 .DS_Store
 BACKGROUND_IMAGE_IMPLEMENTATION.md
+
+.github/**
+test/**
