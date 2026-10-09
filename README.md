@@ -157,6 +157,30 @@ Fine-tune opacity, position, or use your own image via `settings.json`:
 
 ---
 
+## Background troubleshooting (0.1.2)
+
+The 0.1.2 source fix uses `vscode.env.appRoot` instead of deriving the installation path from the extension-host executable. This addresses incorrect background paths on macOS Code Helper processes and versioned Windows installs. It also prefers `workbench.desktop.main.css`, with `workbench.web.main.css` as a fallback.
+
+The generic installation error can still indicate real write-permission problems. Path fixtures pass on Linux, Windows and macOS CI, but a real macOS background installation has not yet been confirmed. If installation still fails with 0.1.2, include your VS Code version and the `[Anime Theme] Path Detection` console lines in the existing issue, removing personal folder names first. Do not disable OS security protections to work around an unknown error.
+
+## Build and release manually
+
+After the release-preparation PR is merged, pull the default branch (`master`, not `main`), then use Node.js 22:
+
+```sh
+git switch master
+git pull --ff-only
+npm ci
+npm test
+npm run package
+```
+
+`npm run package` compiles the extension and uses the pinned VSCE tool to create `anime-theme.vsix`. Install that file with **Extensions > ... > Install from VSIX...** and test background installation before uploading it manually to the Marketplace publisher dashboard. Confirm the package version is 0.1.2. There is no automatic Marketplace publishing step.
+
+CI performs clean install, compile, tests and VSIX packaging on Linux, Windows and macOS. Its successful build checks are not a substitute for testing a real VS Code background installation. See [CHANGELOG.md](CHANGELOG.md) for release changes.
+
+---
+
 ## 🎯 What's Included in Every Theme
 
 Each of the 9 themes includes **200+ carefully crafted color definitions** covering:
