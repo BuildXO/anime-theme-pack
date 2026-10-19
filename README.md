@@ -6,6 +6,7 @@
 [![Installs](https://badgen.net/vs-marketplace/i/LunaCode.anime-theme)](https://marketplace.visualstudio.com/items?itemName=LunaCode.anime-theme)
 [![Rating](https://badgen.net/vs-marketplace/rating/LunaCode.anime-theme)](https://marketplace.visualstudio.com/items?itemName=LunaCode.anime-theme)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
+[![Sponsor BuildXO](https://img.shields.io/badge/Sponsor-BuildXO-ea4aaa?logo=github-sponsors)](https://github.com/sponsors/BuildXO)
 
 If you're an anime fan who codes, this is the VS Code theme pack you've been waiting for. Each theme is meticulously crafted with **200+ color definitions**, rich syntax highlighting, full UI coverage, and custom terminal palettes — built to make long coding sessions feel like an adventure.
 
