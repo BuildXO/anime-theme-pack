@@ -1,6 +1,6 @@
 # 🎌 Anime Theme Pack – Best Anime VS Code Themes for Developers
 
-> **9 stunning anime-inspired VS Code themes** featuring Naruto, Jujutsu Kaisen, Attack on Titan, Demon Slayer, My Hero Academia, One Piece, Cyberpunk Edgerunners, Akira, and Anime Classics — with optional immersive anime background images.
+> **12 stunning anime-inspired VS Code themes** featuring Naruto, Jujutsu Kaisen, Attack on Titan, Demon Slayer, My Hero Academia, One Piece, Cyberpunk Edgerunners, Akira, Solo Leveling, Frieren, Neon Genesis Evangelion, and Anime Classics — with optional immersive anime background images.
 
 [![Version](https://badgen.net/vs-marketplace/v/LunaCode.anime-theme)](https://marketplace.visualstudio.com/items?itemName=LunaCode.anime-theme)
 [![Installs](https://badgen.net/vs-marketplace/i/LunaCode.anime-theme)](https://marketplace.visualstudio.com/items?itemName=LunaCode.anime-theme)
@@ -14,7 +14,7 @@ If you're an anime fan who codes, this is the VS Code theme pack you've been wai
 
 ## 🎨 Theme Showcase
 
-All 9 themes are available immediately after installation — pick your favorite or switch between them anytime.
+All 12 themes are available immediately after installation — pick your favorite or switch between them anytime.
 
 ---
 
@@ -78,13 +78,34 @@ Night City never sleeps. Hot pinks, electric yellows, and neon cyan pulse throug
 ![Naruto Theme](./images/screenshots/naruto.png)
 
 Believe it! This bold **Naruto VS Code theme** channels the iconic orange Will of Fire palette alongside deep shadow blacks and leaf-green accents. Built for developers who never give up — no matter how long the debug session gets.
+
+---
+
+### 10. Solo Leveling: Shadow Monarch
+![Solo Leveling Theme](./images/screenshots/solo-leveling.png)
+
+Arise. Deep void-indigo shadows, violet monarch accents, and "system window" blues make this **Solo Leveling VS Code theme** perfect for developers leveling up through every quest — solo or in a party.
+
+---
+
+### 11. Frieren: Beyond Journey's End
+![Frieren Theme](./images/screenshots/frieren.png)
+
+A thousand years of quiet magic. Serene moonlit teals, warm gold accents, and a calm, timeless palette give this **Frieren VS Code theme** a peaceful feel for the longest of journeys (and codebases).
+
+---
+
+### 12. Neon Genesis Evangelion: Unit-01
+![Evangelion Theme](./images/screenshots/evangelion.png)
+
+Get in the robot. Near-black purples and acid-green highlights channel Unit-01's berserk energy in this **Neon Genesis Evangelion VS Code theme** — synchronization rate not included.
 ---
 
 
 
 ## ✨ Features
 
-- 🎨 **9 Unique Anime VS Code Themes** — Naruto, JJK, AoT, Demon Slayer, MHA, One Piece, Cyberpunk, Akira, and Anime Classics
+- 🎨 **12 Unique Anime VS Code Themes** — Naruto, JJK, AoT, Demon Slayer, MHA, One Piece, Cyberpunk, Akira, Solo Leveling, Frieren, Evangelion, and Anime Classics
 - 🌙 **Beautiful Dark Themes** optimized for extended coding sessions
 - 🖼️ **Optional Anime Background Images** for each theme — toggle on/off with a single command
 - 💻 **Rich Syntax Highlighting** across all major programming languages
@@ -252,10 +273,11 @@ If these themes make your coding sessions more enjoyable:
 
 - ⭐ Star the repository on GitHub
 - 📝 Leave a review on the VS Code Marketplace
+- 💜 [Sponsor BuildXO on GitHub](https://github.com/sponsors/BuildXO)
 - 🔄 Share with your fellow developer-otaku friends
 
 **Happy coding, and may your builds always pass! 🎌✨**
 
 ---
 
-*Keywords: anime VS Code theme, VS Code anime extension, Naruto theme VS Code, Jujutsu Kaisen VS Code, Attack on Titan theme, Demon Slayer VS Code theme, My Hero Academia theme, One Piece VS Code, Cyberpunk Edgerunners theme, anime coding setup, otaku developer, anime dark theme, anime IDE theme, best anime VS Code themes 2024*
+*Keywords: anime VS Code theme, VS Code anime extension, Naruto theme VS Code, Jujutsu Kaisen VS Code, Attack on Titan theme, Demon Slayer VS Code theme, My Hero Academia theme, One Piece VS Code, Solo Leveling VS Code theme, Frieren VS Code theme, Evangelion VS Code theme, Cyberpunk Edgerunners theme, anime coding setup, otaku developer, anime dark theme, anime IDE theme, best anime VS Code themes 2024*
