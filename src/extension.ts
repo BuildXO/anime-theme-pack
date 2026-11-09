@@ -9,6 +9,7 @@ import {
 import { attemptAutoInstall, getStoredThemeId } from './autoInstaller';
 import { cleanupOldBackups } from './checksumService';
 import { isBackgroundInstalled } from './backgroundService';
+import { maybePromptForReview } from './reviewPrompt';
 
 /**
  * Extension activation
@@ -74,13 +75,28 @@ export async function activate(context: vscode.ExtensionContext) {
     }
   );
 
+  // Register command: Sponsor the project on GitHub
+  const sponsorCommand = vscode.commands.registerCommand(
+    'animeTheme.sponsor',
+    () => {
+      vscode.env.openExternal(
+        vscode.Uri.parse('https://github.com/sponsors/BuildXO')
+      );
+    }
+  );
+
   // Add commands to subscriptions
   context.subscriptions.push(
     installCurrentCommand,
     chooseThemeCommand,
     removeCommand,
-    reinstallCommand
+    reinstallCommand,
+    sponsorCommand
   );
+
+  // Fire-and-forget: asks for a Marketplace review only after real use
+  // (7+ days and 10+ activations), at most once per snooze window.
+  void maybePromptForReview(context);
 
   // ── Theme-change state ─────────────────────────────────────────────────────
   //

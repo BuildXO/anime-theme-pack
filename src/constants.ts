@@ -97,6 +97,21 @@ export const THEMES: ThemeDefinition[] = [
     id: 'akira',
     label: 'Akira: Neo Tokyo',
     backgroundImage: 'akira.png'
+  },
+  {
+    id: 'solo-leveling',
+    label: 'Solo Leveling: Shadow Monarch',
+    backgroundImage: 'solo-leveling.png'
+  },
+  {
+    id: 'frieren',
+    label: 'Frieren: Beyond Journey\'s End',
+    backgroundImage: 'frieren.png'
+  },
+  {
+    id: 'evangelion',
+    label: 'Neon Genesis Evangelion: Unit-01',
+    backgroundImage: 'evangelion.png'
   }
 ];
 
