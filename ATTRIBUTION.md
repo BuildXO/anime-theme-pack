@@ -37,6 +37,11 @@ Per-file provenance:
    Source pack: FREE HORROR DARK ALLEYWAY VN BACKGROUNDS
    Source URL: https://liminal-space-dev.itch.io/free-horror-dark-alleyway-vn-backgrounds
 
+
+AI provenance: all three source store pages carry an "AI Assisted"
+disclosure (AI-generated graphics with manual editing by the author), captured
+verbatim in LICENSE-EVIDENCE.md.
+
 The pre-existing background images in this directory (naruto.png,
 one-piece.png, etc.) shipped with earlier releases and are not covered by
 this file.
