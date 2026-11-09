@@ -117,17 +117,17 @@ exports.THEMES = [
     {
         id: 'solo-leveling',
         label: 'Solo Leveling: Shadow Monarch',
-        backgroundImage: 'solo-leveling.png'
+        backgroundImage: 'solo-leveling.jpeg'
     },
     {
         id: 'frieren',
         label: 'Frieren: Beyond Journey\'s End',
-        backgroundImage: 'frieren.png'
+        backgroundImage: 'frieren.jpeg'
     },
     {
         id: 'evangelion',
         label: 'Neon Genesis Evangelion: Unit-01',
-        backgroundImage: 'evangelion.png'
+        backgroundImage: 'evangelion.jpeg'
     }
 ];
 var InstallStatus;
