@@ -82,21 +82,21 @@ Believe it! This bold **Naruto VS Code theme** channels the iconic orange Will o
 ---
 
 ### 10. Solo Leveling: Shadow Monarch
-![Solo Leveling Theme](./images/screenshots/solo-leveling.png)
+![Solo Leveling Theme](./images/screenshots/solo-leveling.jpeg)
 
 Arise. Deep void-indigo shadows, violet monarch accents, and "system window" blues make this **Solo Leveling VS Code theme** perfect for developers leveling up through every quest — solo or in a party.
 
 ---
 
 ### 11. Frieren: Beyond Journey's End
-![Frieren Theme](./images/screenshots/frieren.png)
+![Frieren Theme](./images/screenshots/frieren.jpeg)
 
 A thousand years of quiet magic. Serene moonlit teals, warm gold accents, and a calm, timeless palette give this **Frieren VS Code theme** a peaceful feel for the longest of journeys (and codebases).
 
 ---
 
 ### 12. Neon Genesis Evangelion: Unit-01
-![Evangelion Theme](./images/screenshots/evangelion.png)
+![Evangelion Theme](./images/screenshots/evangelion.jpeg)
 
 Get in the robot. Near-black purples and acid-green highlights channel Unit-01's berserk energy in this **Neon Genesis Evangelion VS Code theme** — synchronization rate not included.
 ---
