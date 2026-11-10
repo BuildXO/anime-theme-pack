@@ -1,0 +1,81 @@
+name: Release
+
+# Builds the VSIX and ships it when the maintainer cuts a release:
+# - push of a v* tag  -> creates the GitHub Release with the VSIX attached
+# - manual GitHub Release -> attaches the VSIX to that release
+# Both paths also publish to Open VSX with trusted publishing (OIDC),
+# matching the "BuildXO/anime-theme-pack + release.yml" registration.
+# workflow_dispatch is a manual escape hatch: no GitHub Release steps run,
+# and Open VSX rejects the publish if that version already exists.
+on:
+  release:
+    types: [published]
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write # create/upload GitHub Releases
+  id-token: write # OIDC token for Open VSX trusted publishing
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Build, release VSIX and publish to Open VSX
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install, compile and test
+        run: |
+          npm ci
+          npm test
+
+      - name: Verify tag matches package.json version
+        if: github.event_name != 'workflow_dispatch'
+        run: |
+          TAG="${GITHUB_REF_NAME#v}"
+          PKG="$(node -p "require('./package.json').version")"
+          if [ "$TAG" != "$PKG" ]; then
+            echo "::error::Tag ${GITHUB_REF_NAME} does not match package.json version ${PKG}"
+            exit 1
+          fi
+
+      - name: Package VSIX
+        run: npm run package
+
+      - name: Create GitHub Release with VSIX
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release create "${GITHUB_REF_NAME}" anime-theme.vsix --title "${GITHUB_REF_NAME}" --generate-notes
+
+      - name: Attach VSIX to GitHub Release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload "${GITHUB_REF_NAME}" anime-theme.vsix --clobber
+
+      - name: Publish to Open VSX with trusted publishing
+        run: |
+          # The Open VSX namespace is "Lunacode" and the registry's trusted
+          # publishing check compares it case-sensitively against the
+          # publisher field (eclipse-openvsx/openvsx#2279). Patch a copy of
+          # the manifest for this publish only, so the Marketplace publisher
+          # spelling in the repo stays untouched. The GitHub Release VSIX
+          # above is already built from the pristine manifest.
+          sed -i 's/"publisher": *"LunaCode"/"publisher": "Lunacode"/' package.json
+          grep -q '"publisher": "Lunacode"' package.json || { echo "::error::publisher field did not match the expected spelling"; exit 1; }
+          npx ovsx@1.4.0 publish --trusted-publishing
