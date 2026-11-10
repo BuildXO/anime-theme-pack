@@ -1,12 +1,12 @@
 name: Release
 
-# Builds the VSIX and ships it when the maintainer cuts a release:
-# - push of a v* tag  -> creates the GitHub Release with the VSIX attached
-# - manual GitHub Release -> attaches the VSIX to that release
-# Both paths also publish to Open VSX with trusted publishing (OIDC),
-# matching the "BuildXO/anime-theme-pack + release.yml" registration.
-# workflow_dispatch is a manual escape hatch: no GitHub Release steps run,
-# and Open VSX rejects the publish if that version already exists.
+# Ships the VSIX when the maintainer cuts a release:
+# - push of a v* tag        -> create GitHub Release with anime-theme.vsix, then Open VSX
+# - manual GitHub Release   -> attach anime-theme.vsix to that release, then Open VSX
+# - workflow_dispatch       -> build/test/package ONLY (safe dry run); set the
+#                              publish_openvsx input to also do a real Open VSX upload
+# Open VSX uses trusted publishing (GitHub OIDC), matching the
+# "BuildXO/anime-theme-pack + release.yml" registration. No stored tokens.
 on:
   release:
     types: [published]
@@ -14,35 +14,36 @@ on:
     tags:
       - "v*"
   workflow_dispatch:
+    inputs:
+      publish_openvsx:
+        description: "Also publish to Open VSX (real registry upload). Default false: dispatch only builds, tests and packages."
+        type: boolean
+        default: false
 
 permissions:
-  contents: write # create/upload GitHub Releases
-  id-token: write # OIDC token for Open VSX trusted publishing
+  contents: read
 
 concurrency:
   group: release-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
-  publish:
-    name: Build, release VSIX and publish to Open VSX
+  build:
+    name: Build, test and package VSIX
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 15
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v7
         with:
           persist-credentials: false
-
       - uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: npm
-
-      - name: Install, compile and test
-        run: |
-          npm ci
-          npm test
-
+      - run: npm ci
+      - run: npm test
       - name: Verify tag matches package.json version
         if: github.event_name != 'workflow_dispatch'
         run: |
@@ -52,30 +53,55 @@ jobs:
             echo "::error::Tag ${GITHUB_REF_NAME} does not match package.json version ${PKG}"
             exit 1
           fi
-
       - name: Package VSIX
         run: npm run package
+      - uses: actions/upload-artifact@v7
+        with:
+          name: vsix
+          path: anime-theme.vsix
+          retention-days: 7
 
-      - name: Create GitHub Release with VSIX
-        if: github.event_name == 'push'
+  publish:
+    name: Release VSIX and publish to Open VSX
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write # create/upload GitHub Releases
+      id-token: write # OIDC for Open VSX trusted publishing
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci # the ovsx packaging step needs the dev toolchain
+      - uses: actions/download-artifact@v7
+        with:
+          name: vsix
+      - name: Create or update GitHub Release with the pristine VSIX
+        if: github.event_name != 'workflow_dispatch'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release create "${GITHUB_REF_NAME}" anime-theme.vsix --title "${GITHUB_REF_NAME}" --generate-notes
-
-      - name: Attach VSIX to GitHub Release
-        if: github.event_name == 'release'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload "${GITHUB_REF_NAME}" anime-theme.vsix --clobber
-
-      - name: Publish to Open VSX with trusted publishing
         run: |
+          gh release create "${GITHUB_REF_NAME}" anime-theme.vsix --title "${GITHUB_REF_NAME}" --generate-notes \
+            || gh release upload "${GITHUB_REF_NAME}" anime-theme.vsix --clobber
+      - name: Publish to Open VSX with trusted publishing
+        if: github.event_name != 'workflow_dispatch' || inputs.publish_openvsx
+        run: |
+          PKG="$(node -p "require('./package.json').version")"
+          if curl -sf "https://open-vsx.org/api/Lunacode/anime-theme/${PKG}" > /dev/null; then
+            echo "Open VSX already has ${PKG}; skipping publish (idempotent re-run)"
+            exit 0
+          fi
           # The Open VSX namespace is "Lunacode" and the registry's trusted
           # publishing check compares it case-sensitively against the
-          # publisher field (eclipse-openvsx/openvsx#2279). Patch a copy of
-          # the manifest for this publish only, so the Marketplace publisher
-          # spelling in the repo stays untouched. The GitHub Release VSIX
-          # above is already built from the pristine manifest.
+          # publisher field (eclipse-openvsx/openvsx#2279). Patch the manifest
+          # in this job only; the GitHub Release VSIX above was built by the
+          # build job from the pristine manifest, and the repo keeps the
+          # VS Code Marketplace publisher spelling.
           sed -i 's/"publisher": *"LunaCode"/"publisher": "Lunacode"/' package.json
           grep -q '"publisher": "Lunacode"' package.json || { echo "::error::publisher field did not match the expected spelling"; exit 1; }
           npx ovsx@1.4.0 publish --trusted-publishing
