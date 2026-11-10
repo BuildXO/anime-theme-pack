@@ -235,7 +235,8 @@
     "pretest": "npm run compile",
     "lint": "eslint src --ext ts",
     "test": "node --test test/*.test.cjs",
-    "package": "vsce package --githubBranch master --out anime-theme.vsix"
+    "package": "vsce package --githubBranch master --out anime-theme.vsix",
+    "prepackage": "node scripts/check-icon.js"
   },
   "devDependencies": {
     "@types/node": "^20.x",
