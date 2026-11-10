@@ -113,6 +113,21 @@ exports.THEMES = [
         id: 'akira',
         label: 'Akira: Neo Tokyo',
         backgroundImage: 'akira.png'
+    },
+    {
+        id: 'solo-leveling',
+        label: 'Solo Leveling: Shadow Monarch',
+        backgroundImage: 'solo-leveling.jpeg'
+    },
+    {
+        id: 'frieren',
+        label: 'Frieren: Beyond Journey\'s End',
+        backgroundImage: 'frieren.jpeg'
+    },
+    {
+        id: 'evangelion',
+        label: 'Neon Genesis Evangelion: Unit-01',
+        backgroundImage: 'evangelion.jpeg'
     }
 ];
 var InstallStatus;

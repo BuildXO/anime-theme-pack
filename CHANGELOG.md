@@ -2,6 +2,21 @@
 
 All notable changes to the "anime-theme" extension will be documented in this file.
 
+## [0.2.0] - Unreleased
+
+### Themes Added
+- Solo Leveling: Shadow Monarch - deep void-indigo editor with violet shadow accents and "system window" blues, with original shadow-spire background artwork.
+- Frieren: Beyond Journey's End - serene moonlit teal with warm gold accents, with original moonlit-meadow background artwork.
+- Neon Genesis Evangelion: Unit-01 - near-black purple with acid-green highlights, with original night-skyline background artwork.
+
+### Added
+- Marketplace review prompt: after at least 7 days and 10 activations, a dismissible dialog offers a quick rating link. "Later" snoozes for 7 days; "Don't Ask Again" disables it permanently.
+- New command: `Anime Theme: Sponsor on GitHub` opens the project's GitHub Sponsors page.
+
+### Notes
+- All three new background images are original, programmatically generated artwork created for this project; no third-party assets or downloads were added.
+- The Marketplace listing's Sponsor button and README sponsor badge shipped in 0.1.2 (#14) are unchanged.
+
 ## [0.1.2] - Unreleased
 
 ### Fixed

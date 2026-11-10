@@ -155,7 +155,7 @@ body::before {
   height: 100% !important;
   z-index: 0 !important;
   pointer-events: none !important;
-  background-color: rgba(15, 20, 24, 0.65) !important;
+  background-color: rgba(15, 20, 24, 0.86) !important;
 }
 
 /* ── 1b. Ensure workbench content sits above the overlay ── */

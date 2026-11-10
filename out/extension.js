@@ -40,6 +40,7 @@ const themeManager_1 = require("./themeManager");
 const autoInstaller_1 = require("./autoInstaller");
 const checksumService_1 = require("./checksumService");
 const backgroundService_1 = require("./backgroundService");
+const reviewPrompt_1 = require("./reviewPrompt");
 /**
  * Extension activation
  */
@@ -84,8 +85,15 @@ async function activate(context) {
         await new Promise(resolve => setTimeout(resolve, 100));
         await (0, themeManager_1.installCurrentThemeBackground)(context);
     });
+    // Register command: Sponsor the project on GitHub
+    const sponsorCommand = vscode.commands.registerCommand('animeTheme.sponsor', () => {
+        vscode.env.openExternal(vscode.Uri.parse('https://github.com/sponsors/BuildXO'));
+    });
     // Add commands to subscriptions
-    context.subscriptions.push(installCurrentCommand, chooseThemeCommand, removeCommand, reinstallCommand);
+    context.subscriptions.push(installCurrentCommand, chooseThemeCommand, removeCommand, reinstallCommand, sponsorCommand);
+    // Fire-and-forget: asks for a Marketplace review only after real use
+    // (7+ days and 10+ activations), at most once per snooze window.
+    void (0, reviewPrompt_1.maybePromptForReview)(context);
     // ── Theme-change state ─────────────────────────────────────────────────────
     //
     // VS Code fires workbench.colorTheme on EVERY hover during live preview AND

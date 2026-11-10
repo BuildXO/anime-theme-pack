@@ -1,10 +1,10 @@
 {
   "name": "anime-theme",
-  "displayName": "Anime Theme Pack \u2014 Jujutsu Kaisen, Naruto, One Piece & More",
+  "displayName": "Anime Theme Pack — Jujutsu Kaisen, Naruto, One Piece & More",
   "publisher": "LunaCode",
   "icon": "images/logo.png",
-  "description": "\ud83c\udf8c The ultimate anime VS Code theme collection. 9 immersive dark themes inspired by Jujutsu Kaisen (Gojo Satoru), Attack on Titan, My Hero Academia (Deku), Naruto, One Piece, Demon Slayer, Cyberpunk Edgerunners & Akira. Features 200+ color definitions, animated background support, and full UI customization.",
-  "version": "0.1.2",
+  "description": "🎌 The ultimate anime VS Code theme collection. 12 immersive dark themes inspired by Jujutsu Kaisen (Gojo Satoru), Attack on Titan, My Hero Academia (Deku), Naruto, One Piece, Demon Slayer, Cyberpunk Edgerunners, Akira, Solo Leveling, Frieren & Neon Genesis Evangelion. Features 200+ color definitions, matching background artwork, and full UI customization.",
+  "version": "0.2.0",
   "license": "MIT",
   "sponsor": {
     "url": "https://github.com/sponsors/BuildXO"
@@ -63,7 +63,15 @@
     "coding theme",
     "dark",
     "vibrant",
-    "colorful"
+    "colorful",
+    "solo leveling",
+    "sung jinwoo",
+    "shadow monarch",
+    "frieren",
+    "frieren beyond journeys end",
+    "evangelion",
+    "neon genesis evangelion",
+    "unit-01"
   ],
   "engines": {
     "vscode": "^1.109.0"
@@ -100,6 +108,11 @@
       {
         "command": "animeTheme.reinstallBackground",
         "title": "Anime Theme: Reinstall Background (Troubleshooting)",
+        "category": "Anime Theme"
+      },
+      {
+        "command": "animeTheme.sponsor",
+        "title": "Anime Theme: Sponsor on GitHub",
         "category": "Anime Theme"
       }
     ],
@@ -197,6 +210,21 @@
         "label": "Akira: Neo Tokyo",
         "uiTheme": "vs-dark",
         "path": "./themes/cyberpunk.json"
+      },
+      {
+        "label": "Solo Leveling: Shadow Monarch",
+        "uiTheme": "vs-dark",
+        "path": "./themes/solo-leveling-shadow.json"
+      },
+      {
+        "label": "Frieren: Beyond Journey's End",
+        "uiTheme": "vs-dark",
+        "path": "./themes/frieren-beyond.json"
+      },
+      {
+        "label": "Neon Genesis Evangelion: Unit-01",
+        "uiTheme": "vs-dark",
+        "path": "./themes/evangelion-unit01.json"
       }
     ]
   },
