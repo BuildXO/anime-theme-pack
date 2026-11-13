@@ -78,7 +78,7 @@ jobs:
           node-version: "22"
           cache: npm
       - run: npm ci # the ovsx packaging step needs the dev toolchain
-      - uses: actions/download-artifact@v7
+      - uses: actions/download-artifact@v8
         with:
           name: vsix
       - name: Create or update GitHub Release with the pristine VSIX
